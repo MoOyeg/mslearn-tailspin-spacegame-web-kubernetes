@@ -25,6 +25,9 @@ stages:
         containerRegistry: 'Container Registry Connection'
         tags: |
           $(tag)
+          
+- publish: '$(Build.SourcesDirectory)/manifests'
+  artifact: manifests
 
 - stage: 'Deploy'
   displayName: 'Deploy the container'
@@ -34,6 +37,7 @@ stages:
     displayName: 'Deploy job'
     pool:
       vmImage: 'ubuntu-20.04'
+    environment: 'openshift-azure-devops-1672170131688'
     variables:
     - group: Release
     steps:
