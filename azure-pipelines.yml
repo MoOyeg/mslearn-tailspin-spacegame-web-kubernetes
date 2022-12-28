@@ -2,7 +2,7 @@ trigger:
 - 'main'
 
 variables:
-  buildConfiguration: 'Release'
+  buildConfiguration: '1.0'
   webRepository: 'web'
   tag: '$(Build.BuildId)'
   leaderboardRepository: 'leaderboard'
