@@ -50,7 +50,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: 'ubuntu-20.04'
-    environment: 'openshift-azure-devops-1672170131688'
+    environment: 'openshift'
     variables:
     - group: Release
     strategy:
